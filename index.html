@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGL2 Project</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Matrix Visualization with WebGL2</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <canvas id="webglCanvas"></canvas>
-    <script src="app.js"></script>
+    <div id="control-panel">
+        <label for="einsum-input">Enter Einsum Operation:</label>
+        <input type="text" id="einsum-input" placeholder="e.g., ij,ji->i" />
+        <button id="visualizeBtn">Visualize</button>
+    </div>
+    <div id="webgl-container">
+        <canvas id="webglCanvas"></canvas>
+    </div>
+    <script type="module" src="js/webgl-utils.js"></script>
+    <script type="module" src="js/shader.js"></script>
+    <script type="module" src="js/main.js"></script>    
 </body>
 </html>
